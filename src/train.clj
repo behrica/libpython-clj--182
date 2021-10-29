@@ -31,7 +31,7 @@
    (mm/drop-missing)
    {:metamorph/id :model}
    (mm/model (merge options
-                    { ;; :min_count 1
+                    { :min_count 1
                      :documents-column :abstract
                      :verbose 1
                      :model-type :top2vec}))))
@@ -40,10 +40,7 @@
 (def search-grid
   (ml/sobol-gridsearch {:speed (ml/categorical [:fast-learn :learn :deep-learn])
 
-                        :embedding_model (ml/categorical ["doc2vec"
-                                                            "universal-sentence-encoder"
-                                                            "universal-sentence-encoder-multilingual"
-                                                            "distiluse-base-multilingual-cased"])}))
+                        :embedding_model (ml/categorical ["doc2vec"])}))
 
 
 (def pipes

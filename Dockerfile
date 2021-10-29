@@ -22,7 +22,7 @@ RUN unbuffer pip3 install -r requirements.txt
 RUN export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && unbuffer pip3 install python-javabridge
 
 USER root
-RUN mkdir /app && chmod o+w /app
+RUN mkdir -p /app/outputs && chmod o+w -R /app
 RUN mkdir /data && chmod o+w /data
 
 USER user

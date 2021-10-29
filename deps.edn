@@ -1,0 +1,36 @@
+{
+ :mvn/repos {"clojars" {:url "https://repo.clojars.org/"}
+             "central" {:url "https://repo1.maven.org/maven2/"}
+             "bedatadriven" {:url "https://nexus.bedatadriven.com/content/groups/public/"}}
+
+ :paths ["src" "resources"]
+
+ :deps {
+        org.clojure/clojure      {:mvn/version "1.10.3"}
+
+
+        clj-python/libpython-clj {:mvn/version "2.000"}
+
+
+        scicloj/metamorph.ml {:git/url "https://github.com/scicloj/metamorph.ml.git",
+                              :git/sha "c516596e4faafaf0ae3cf2e7980e31d474914fe1",}
+                              
+        scicloj/scicloj.ml       {:git/url "https://github.com/scicloj/scicloj.ml.git"
+                                  :git/sha "4d751e2127bb5fce984b86886f960ef31e2d07ab"}
+        scicloj/scicloj.ml.top2vec       {:git/url "https://github.com/scicloj/scicloj.ml.top2vec.git"
+                                          :git/sha "0cdd3e57d9613275b689a9005cf009bcd6b29b1b"}}
+        
+        
+        
+
+
+
+
+
+        
+
+ :aliases {
+           :cider-clj {:extra-deps {cider/cider-nrepl {:mvn/version "0.27.2"}
+                                    refactor-nrepl {:mvn/version  "3.0.0-alpha13"}}
+                       :main-opts ["-m" "nrepl.cmdline" "-b" "0.0.0.0" "-p" "12345" "--middleware"
+                                   "[cider.nrepl/cider-middleware,refactor-nrepl.middleware/wrap-refactor]"]}}}

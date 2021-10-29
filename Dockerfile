@@ -35,5 +35,6 @@ RUN pip3 install numpy==1.20
 RUN curl https://raw.githubusercontent.com/behrica/libpython-clj/2b5c495561d816acd696f50dc8ae08bd37842530/cljbridge.py -o /home/user/.local/lib/python3.9/site-packages/cljbridge.py
 RUN curl https://gist.githubusercontent.com/behrica/91b3f958fad80247069ade3b96646dcf/raw/7d27ec07bfe7b6cef1598c530bff50882f84ba70/PWI_top2vec.py -o /home/user/.local/lib/python3.9/site-packages/PWI_top2vec.py
 
+ENV TFHUB_DOWNLOAD_PROGRESS=1
 
 CMD ["/bin/bash", "-c", "sleep 0.1;clj"]

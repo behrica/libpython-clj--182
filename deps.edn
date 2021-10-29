@@ -30,6 +30,10 @@
         
 
  :aliases {
+           :nREPL
+           {:extra-deps
+            {nrepl/nrepl {:mvn/version "0.8.3"}}}
+
            :cider-clj {:extra-deps {cider/cider-nrepl {:mvn/version "0.27.2"}
                                     refactor-nrepl {:mvn/version  "3.0.0-alpha13"}}
                        :main-opts ["-m" "nrepl.cmdline" "-b" "0.0.0.0" "-p" "12345" "--middleware"

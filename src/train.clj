@@ -1,7 +1,6 @@
 (ns train
   (:require
    [camel-snake-kebab.core :as csk]
-   [clj-pdf.core :as pdf]
    [scicloj.ml.core :as ml]
    [scicloj.ml.dataset :as ds]
    [scicloj.ml.metamorph :as mm]

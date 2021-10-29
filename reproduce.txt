@@ -1,0 +1,9 @@
+1. git clone git clone git@github.com:behrica/libpython-clj--182.git
+2. cd libpython-clj--182.git
+3. ./docker_build.sh
+4. ./run_repl_in_docker.sh
+
+In new shell:
+
+5. clj -A:nREPL -m nrepl.cmdline -c -p 12345
+6. In that repl: (load-file "src/train.clj")
